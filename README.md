@@ -1,54 +1,23 @@
-# Perk Framework
+# Exquisite Corpse
 
-## Build Node Web Apps with Ease
+## Join the story
 
-Perk is a sturdy node framework that gets out of your way, built on top of the best existing libraries out there. This framework is for developers who value simplicity and are looking for a solid set of tools to build sophisticated web applications.
+Everyone struggles with writing at some point. Sitting down in front of a blank page can be daunting to even the most prolific wordsmith. I'm struggling to write this desription right now. Writing is incredibly personal, whether it is creative, academic, or journalistic. When we write we reveal both who we are and who we want to be.
 
-### [Getting Started](http://perkframework.com/guides/getting-started-os-x.html)
+Over the years I've had many people tell me that they can't write. I have always believed they can. I believe anyone can write, sometimes we just need a starting point. The Exquisite Corpse app creates that starting point -- it gives writers a chance to share the experience of writing, to start with a page that is not blank. 
 
-Learn how to get up and running with Perk.
+The Exquisite Corpse app is inspired by and borrows its name from a game played by Surrealists artists. Participants contribute, in turn, to a written work but are only shown the last few lines of text written by the previous collaborator. The name is derived from a line in one of the Surrealists' first such projects: *Le cadavre exquis boira le vin nouveau* ("The exquisite corpse shall drink the new wine").
 
-### [Documentation](http://perkframework.com/api/index.html)
+Stories created collaboratively are often surprising and strange. Anyone is welcome to read the completed Exquisite Corpse stories for enjoyment or inspiration. If you register, you can also begin, continue, and, depending on how many people have already contributed, end a story. 
 
-Detailed description of the ins and outs of the framework.
+## User Stories
+Trello link here.
 
-### [Guides](http://perkframework.com/guides/index.html)
+## Wireframes
+Embed balsamiq wireframes here.
 
-Need to build and API server? Set up user authentication or OAuth? This is the place to go for step by step guides.
+## Models
+Gimme all the dataz
 
-<!--
-1. Routing (express)
-1. Flash Messages / errors
-1. Database connection and ORM (knex and bookshelf)
-1. User registration and authentication (passport and custom adapters)
-1. Configuration [config-loader](https://github.com/alarner/config-loader)
-1. Nice gulp, babel, react configuration
-
-### Tools
-
-* express
-* react
-* gulp
-* sass
-* browserify
-* babel
-* knex
-* bookshelf
-* passport
-
-### To use...
-
-1. Download / fork / clone
-1. Run `npm install -g gulp knex` to install global dependencies
-1. Run `npm install` to install local dependencies
-1. Run `gulp` to start the server
-
-### Todo
-
-1. Local user login
-1. Password reset
-1. More oauth providers (facebook, twitter, amazon, github, bitbucket, dropbox, instagram, linkedin, slack, windows live, etc.)
-1. Hierarchical user permissioning system
-1. OAuth / API server
-1. CSRF protection
--->
+## APIs, Plugins, Libraries, and Frameworks
+Descriptions and demos
