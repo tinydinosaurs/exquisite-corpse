@@ -8,7 +8,9 @@ Over the years I've had many people tell me that they can't write. I have always
 
 The Exquisite Corpse app is inspired by and borrows its name from a game played by Surrealists artists. Participants contribute, in turn, to a written work but are only shown the last few lines of text written by the previous collaborator. The name is derived from a line in one of the Surrealists' first such projects: *Le cadavre exquis boira le vin nouveau* ("The exquisite corpse shall drink the new wine").
 
-Stories created collaboratively are often surprising and strange. Anyone is welcome to read the completed Exquisite Corpse stories for enjoyment or inspiration. If you register, you can also begin, continue, and, depending on how many people have already contributed, end a story. 
+Stories created collaboratively are often surprising and strange. Anyone is welcome to read the completed Exquisite Corpse stories for enjoyment or inspiration. Registered users can begin, continue, or -- depending on how many people have already contributed -- end a story. 
+
+Anyone is welcome to participate, so sign up and join a story now!
 
 ## User Stories
 Trello link here.
