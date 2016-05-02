@@ -19,7 +19,7 @@ Check out my [Trello user stories](https://trello.com/b/eopIlxpZ/exquisite-corps
 Embed balsamiq wireframes here.
 
 ## Models
-Gimme all the dataz
+![](./exquisite_corpse.png)
 
 ## APIs, Plugins, Libraries, and Frameworks
 Descriptions and demos
