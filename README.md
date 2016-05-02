@@ -16,7 +16,9 @@ Anyone is welcome to participate, so sign up and join a story now!
 Check out my [Trello user stories](https://trello.com/b/eopIlxpZ/exquisite-corpse)!
 
 ## Wireframes
-Embed balsamiq wireframes here.
+![](./home_page.jpg)
+![](./dashboard_register_read.jpg)
+![](./start_continue_story.jpg)
 
 ## Models
 ![](./exquisite_corpse.png)
