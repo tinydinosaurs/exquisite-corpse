@@ -13,7 +13,7 @@ Stories created collaboratively are often surprising and strange. Anyone is welc
 Anyone is welcome to participate, so sign up and join a story now!
 
 ## User Stories
-Trello link here.
+Check out my [Trello user stories](https://trello.com/b/eopIlxpZ/exquisite-corpse)!
 
 ## Wireframes
 Embed balsamiq wireframes here.
