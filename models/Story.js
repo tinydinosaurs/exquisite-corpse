@@ -5,7 +5,7 @@ module.exports = bookshelf.model('Story', {
 	hasTimestamps: ['createdAt', 'updatedAt', 'deletedAt'],
 	creator: function() {
 		return this.belongsTo('User', 'userId');
-	}
+	},
 	entry: function() {
 		return this.hasMany('Entry', 'storyId');
 	}
