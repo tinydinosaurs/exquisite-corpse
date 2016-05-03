@@ -24,4 +24,15 @@ Check out my [Trello user stories](https://trello.com/b/eopIlxpZ/exquisite-corps
 ![](./exquisite_corpse.png)
 
 ## APIs, Plugins, Libraries, and Frameworks
-Descriptions and demos
+* React - Javascript user interface library
+* React-Router - URL routing 
+* jQuery - AJAX request
+* Backbone - front end models and collections
+* Underscore - Backbone and jQuery helper functions
+* Perk - node framework
+* Node - runtime environment
+* Postgres - relational database
+* Bookshelf - database mapping
+* Knex - database query builder
+* [Typeplate](http://typeplate.com/demo.html) - typographic framework
+* [Bulma](http://bulma.io/) - CSS framework
