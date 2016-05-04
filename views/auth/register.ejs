@@ -16,6 +16,10 @@
 				<input type="text" placeholder="last name" name="lastName" value="<%= prev.display('body', 'lastName') %>">
 			</div>
 			<div>
+				<%- error.display('username') %>
+				<input type="text" placeholder="username" name="username" value="<%= prev.display('body', 'username') %>">
+			</div>
+			<div>
 				<%- error.display('email') %>
 				<input type="email" placeholder="email" name="email" value="<%= prev.display('body', 'email') %>">
 			</div>
