@@ -3,8 +3,62 @@
 
 body {
 	font-family: 'Lora', serif;
+	font-size: 1.5em;
 }
 
 h1, h2, h3 {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Lato', sans-serif;
+}
+
+h1 {
+	font-size: 1.75em;
+	margin-bottom: 0.5em;
+}
+
+footer {
+	border-top: 1px solid $grey-light;
+	margin-top: 1.5em;
+	padding-top: 0.5em;
+	font-size: 0.75em;
+}
+
+nav {
+	height: 2.5em;
+	font-size: 0.85em;
+	line-height: 2.5em;
+	overflow: hidden;
+	padding: 0 1em;
+}
+
+.nav-links {
+	float: right;
+}
+
+.nav-link {
+	margin-left: 0.75em;
+}
+
+.hero {
+	background: url('/../images/hero-img.png');
+	height: 18em;
+	line-height: 10em;
+	padding: 0 2em;
+	h1 {
+		font-family: 'Lora', serif;
+		font-style: italic;
+		color: #e9eae6;
+		font-size: 3em;
+	}
+}
+
+.list-section {
+	padding-top: 3em;
+}
+
+.completed-stories {
+	margin-top: 1em;
+}
+
+.read-story {
+	margin: 0 10em;
 }
