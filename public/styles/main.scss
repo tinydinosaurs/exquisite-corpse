@@ -1,4 +1,10 @@
 @import "node_modules/bulma/bulma";
+@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic|Libre+Baskerville:400,400italic|Source+Sans+Pro:600|Karla:700|Lato:700|Work+Sans:500|Poppins:500);
 
+body {
+	font-family: 'Lora', serif;
+}
 
-
+h1, h2, h3 {
+	font-family: 'Poppins', sans-serif;
+}
