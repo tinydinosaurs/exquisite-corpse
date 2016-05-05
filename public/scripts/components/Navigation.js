@@ -6,10 +6,12 @@ export default React.createClass({
 	render: function() {
 		return (
 			<nav>
-				<Link to="/"><img src="" />Logo</Link>
-				<Link className="nav-links" to='/read-story'>read</Link>		
-				<Link className="nav-links" to='/start-story'>compose</Link>		
-				<Link className="nav-links" to='/login'>log in</Link>
+				<Link to="/"><img src="" />Exquisite Corpse</Link>
+				<div className="nav-links">
+					<Link className="nav-link" to='/read-story'>read</Link>		
+					<Link className="nav-link" to='/start-story'>compose</Link>		
+					<Link className="nav-link" to='/login'>log in</Link>
+				</div>
 			</nav>
 		);
 	}

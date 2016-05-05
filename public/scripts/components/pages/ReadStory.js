@@ -3,7 +3,7 @@ import React from 'react';
 export default React.createClass({
 	render: function() {
 		return (
-			<section>
+			<section className="read-story">
 				<h1>The fox eats grass</h1>
 				<p>Surprise pegasus social delight unicorn puppy, pop delight pop rainbows wereunicorn. Wereunicorn pony rainbows kittens social delight delight puppy, rainbows unicorn pegasus delight app pigeon. Kittens puppy puppy delight delight pegasus app puppy app. Kittens delight surprise pop rainbows surprise surprise delight rainbows. Surprise pegasus app pigeon unicorn surprise pony rainbows delight, pony pop social delight delight.</p>
 				<p>Puppy social pegasus delight wereunicorn pop wereunicorn pony wereunicorn. Pop pegasus puppy, wereunicorn app pony pony kittens kittens pegasus. Pegasus rainbows kittens pigeon pony, pigeon rainbows pegasus unicorn surprise social.</p>
