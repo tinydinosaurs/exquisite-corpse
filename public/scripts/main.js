@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import $ from 'jquery';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router';
 import App from './components/App';
 import Home from './components/pages/Home';
@@ -10,7 +11,11 @@ import ContinueStory from './components/pages/ContinueStory';
 import Login from './components/pages/Login';
 
 
-console.log('js working');
+$.ajaxSetup({
+	headers: {
+		Accept: 'application/json'
+	}
+});
 
 const router = (
 	<Router history={browserHistory}>

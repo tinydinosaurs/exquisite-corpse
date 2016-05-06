@@ -5,7 +5,7 @@ export default React.createClass({
 		return (
 			<section className="home">
 				<div className="hero is-large">
-					<h1 class="title">...join the story</h1>
+					<h1 className="title">...join the story</h1>
 				</div>
 				<div className="list-section">
 					<h1>complete stories</h1>
