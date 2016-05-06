@@ -13,8 +13,8 @@ export default React.createClass({
 	
 	render: function() {
 		return (
-			<section className="columns">
-				<form onSubmit={this.login} className="login-box column is-half"> 
+			<section>
+				<form onSubmit={this.login} className="login-box"> 
 					<h1>log in</h1>
 					<p className="control has-icon">
 						<input className="input" type="email" placeholder="email" ref='email' title="please enter a valid email address" />
