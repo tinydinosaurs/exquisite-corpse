@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><%= title %></title>
-		<link rel="stylesheet" href="<%= env === 'development' ? '/styles/main.scss.css' : '/styles/main.scss.min.css?'+version %>" />
+		<title>exquisite corpse</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="<%= env === 'development' ? '/styles/main.scss.css' : '/styles/main.scss.min.css?'+version %>" />
 	</head>
 	<body>
 		<main>
-			<h1><%= title %></h1>
-			<p>Welcome to <%= title %></p>
 		</main>
 		<script type="text/javascript" src="<%= env === 'development' ? '/scripts/bundle.js' : '/scripts/bundle.min.js?'+version %>"></script>
 	</body>
