@@ -1,9 +1,13 @@
 @import "node_modules/bulma/bulma";
 @import url(https://fonts.googleapis.com/css?family=Lora:400,400italic|Lato:700,400);
 
+html {
+    font-size: 62.5%
+}
+
 body {
 	font-family: 'Lora', serif;
-	font-size: 1.5em;
+	font-size: 1.6rem;
 }
 
 h1, h2, h3 {
@@ -11,23 +15,16 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 1.75em;
-	margin-bottom: 0.5em;
-}
-
-footer {
-	border-top: 1px solid $grey-light;
-	margin-top: 1.5em;
-	padding-top: 0.5em;
-	font-size: 0.75em;
+	font-size: 4.2rem;
+	margin-top: 2em;
+	margin-bottom: 1em;
 }
 
 nav {
-	height: 2.5em;
-	font-size: 0.85em;
-	line-height: 2.5em;
+	height: 4rem;
+	line-height: 4rem;
 	overflow: hidden;
-	padding: 0 1em;
+	padding: 0 1rem;
 }
 
 .nav-links {
@@ -35,30 +32,51 @@ nav {
 }
 
 .nav-link {
-	margin-left: 0.75em;
+	margin-left: 0.75rem;
 }
 
 .hero {
 	background: url('/../images/hero-img.png');
-	height: 18em;
-	line-height: 10em;
-	padding: 0 2em;
+	height: 30rem;
+	padding: 0 2rem;
 	h1 {
 		font-family: 'Lora', serif;
 		font-style: italic;
 		color: #e9eae6;
-		font-size: 3em;
+		font-size: 3rem;
 	}
 }
 
 .list-section {
-	padding-top: 3em;
+	padding-top: 3rem;
 }
 
 .completed-stories {
-	margin-top: 1em;
+	margin-top: 1rem;
 }
 
 .read-story {
-	margin: 0 10em;
+	font-size: 2.2rem;
+	line-height: 3.2rem;
+	width: 60rem;
+	margin: 0 auto;
+
+	p {
+		margin-bottom: 1em;
+	}
 }
+
+.login-box {
+	width: 66%;
+	margin: 5rem auto;
+}
+
+footer {
+	border-top: 1px solid $grey-light;
+	margin-top: 1.5rem;
+	padding: 0.5rem 1rem;
+}
+
+
+
+
