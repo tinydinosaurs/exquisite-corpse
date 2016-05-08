@@ -12,7 +12,6 @@ export default React.createClass({
 	},
 
 	componentDidMount: function() {
-		console.log(this.state.user.get('id'));
 		this.state.user.on('change', () => {
 			this.setState({
 				user: user
