@@ -30,5 +30,9 @@ module.exports = {
 	NOT_LOGGED_IN: {
 		message: 'You must be logged in to perform that action.',
 		status: 403
+	},
+	MISSING_USERNAME: {
+		message: 'Please enter a username',
+		status: 400
 	}
 };

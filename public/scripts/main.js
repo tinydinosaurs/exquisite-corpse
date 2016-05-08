@@ -9,6 +9,7 @@ import ReadStory from './components/pages/ReadStory';
 import StartStory from './components/pages/StartStory';
 import ContinueStory from './components/pages/ContinueStory';
 import Login from './components/pages/Login';
+import Register from './components/pages/Register';
 
 
 $.ajaxSetup({
@@ -26,6 +27,7 @@ const router = (
 			<Route path="/start-story" component={StartStory} />
 			<Route path="/continue-story" component={ContinueStory} />
 			<Route path="/login" component={Login}/>
+			<Route path="/register" component={Register} />
 		</Route>
 	</Router>
 );
