@@ -45,8 +45,11 @@ export default React.createClass({
 			},
 			
 			success: (loggedArg) => {
+				console.log('this is the loggedArg');
+				console.log(loggedArg);
 				this.state.user.set(loggedArg);
-				browserHistory.push('/');
+				console.log('get this id: ' + this.state.user.get('id'));
+				browserHistory.push('/dashboard');
 			},
 			error: (errorArg) => {
 				this.setState({errors: errorArg.responseJSON});

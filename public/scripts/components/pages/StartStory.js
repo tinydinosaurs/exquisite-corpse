@@ -8,7 +8,7 @@ export default React.createClass({
 	getInitialState: function() {
 		console.log('this is the initial state, yo');
 		return {
-			story: new story,
+			story: story,
 			user: user		
 		};
 	},
@@ -37,8 +37,9 @@ export default React.createClass({
 
 	startStory: function(e) {
 		e.preventDefault();
-		console.log(this.state.story);
+		console.log(this.state.story.title);
 		console.log(this.state.user);
+		console.log(this.refs.title.value);
 		// $.ajax({
 		// 	url: '/api/v1/story',
 		// 	type: 'POST',
