@@ -81,29 +81,3 @@ export default React.createClass({
 }); 
 
 // future functionality: random title generator
-
-
-
-
-
-// let story = new Story();
-
-// 		story.save(
-// 			{
-// 				title: this.refs.title.value,
-// 				creator: this.state.user.id
-// 			},
-
-// 			{
-// 				success: (createdStory) => {
-// 					console.log('you chose wisely');
-// 				}
-// 			},
-
-// 			{
-// 				error: (errorArg) => {
-// 					console.log('you chose poorly');
-// 				}
-// 			}
-// 		);
-

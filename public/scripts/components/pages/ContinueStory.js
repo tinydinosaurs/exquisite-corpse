@@ -1,6 +1,17 @@
 import React from 'react';
+import Story from '../../models/StoryModel';
+import entry from '../../models/EntryModel';
+import user from '../../models/UserModel';
 
 export default React.createClass({
+	getInitialState: function() {
+		return {
+			user: user,
+			story: Story,
+			entry: entry
+		};
+	},
+
 	render: function() {
 		return (
 			<section>
@@ -22,5 +33,7 @@ export default React.createClass({
 	continueStory: function(e) {
 		e.preventDefault();
 		console.log('clickety click click');
+		console.log(this.state.user.id);
+		console.log(this.state.story.id);
 	}
 });

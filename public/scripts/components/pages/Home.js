@@ -1,6 +1,8 @@
 import React from 'react';
+import stories from '../../collections/storyCollection';
 
 export default React.createClass({
+	
 	render: function() {
 		return (
 			<section className="home">

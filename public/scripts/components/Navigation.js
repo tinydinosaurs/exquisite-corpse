@@ -16,7 +16,6 @@ export default React.createClass({
 			this.setState({
 				user: user
 			});
-			console.log(this.state.user.get('id'));
 		});
 	},
 

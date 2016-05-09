@@ -45,7 +45,7 @@ export default React.createClass({
   						<input className="input" type="text" ref="confirmPass" placeholder="confirm password" />
   					</p>*/}
   					<p className="control">
-						<button type="submit" className="button is-primary">Login</button>
+						<button type="submit" className="button is-primary">Register</button>
 					</p>
 				</form>
 
