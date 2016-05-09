@@ -1,15 +1,15 @@
 import React from 'react';
 import $ from 'jquery';
-import story from '../../models/StoryModel';
-import entry from '../../collections/EntryCollection';
+import Story from '../../models/StoryModel';
+import entry from '../../models/EntryModel';
 import user from '../../models/UserModel';
 
 export default React.createClass({
 	getInitialState: function() {
-		console.log('this is the initial state, yo');
 		return {
-			story: story,
-			user: user		
+			story: Story,
+			user: user,
+			entry: entry		
 		};
 	},
 
@@ -33,19 +33,77 @@ export default React.createClass({
 				</form>
 			</section>
 			);
-	},
+	}, //end render function
 
 	startStory: function(e) {
 		e.preventDefault();
-		console.log(this.state.story.title);
-		console.log(this.state.user);
+		console.log(this.state.user.id);
 		console.log(this.refs.title.value);
-		// $.ajax({
-		// 	url: '/api/v1/story',
-		// 	type: 'POST',
-		// 	data: {}
-		// });
+		$.ajax({
+			url: '/api/v1/story',
+			type: 'POST',
+			data: {
+				title: this.refs.title.value,
+				userId: this.state.user.id,
+				coverImage: ''
+			},
+			headers: {
+				Accept: 'application/json'
+			},
+			success: (data) => {
+				console.log(data);
+				console.log(data.id);
+				$.ajax({
+					url: '/api/v1/entry',
+					type: 'POST',
+					data: {
+						storyId: data.id,
+						userId: this.state.user.id,
+						content: this.refs.compose.value,
+						order: 1
+					},
+					header: {
+						Accept: 'application/json'
+					},
+					success: (entryAdded) => {
+						console.log(entryAdded);
+					},
+					error: (entryError) => {
+						console.log('entry addition failed');
+					}
+				});
+			},
+			error: (errorArg) => {
+				console.log('something went horribly wrong');
+			}
+		});
 	}
-});
+}); 
 
 // future functionality: random title generator
+
+
+
+
+
+// let story = new Story();
+
+// 		story.save(
+// 			{
+// 				title: this.refs.title.value,
+// 				creator: this.state.user.id
+// 			},
+
+// 			{
+// 				success: (createdStory) => {
+// 					console.log('you chose wisely');
+// 				}
+// 			},
+
+// 			{
+// 				error: (errorArg) => {
+// 					console.log('you chose poorly');
+// 				}
+// 			}
+// 		);
+
