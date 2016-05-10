@@ -1,4 +1,5 @@
 import React from 'react';
+import user from '../../models/UserModel';
 import stories from '../../collections/StoryCollection';
 import entries from '../../collections/EntryCollection';
 import StoryThumb from '../subcomponents/StoryThumb';
@@ -18,14 +19,15 @@ export default React.createClass({
 	componentDidMount: function() {
 		console.log('did my home page component mount?');
 		stories.on('update', this.updateStories);
-		entries.on('update', this.updateEntries);
-		stories.fetch();
-		entries.fetch();
+		stories.fetch({
+			data: {
+				withRelated: ['entry']
+			}
+		});
 	},
 
 	componentWillUnmount: function() {
 		stories.off('update', this.updateStories);
-		entries.off('update', this.updateEntries);
 	},
 
 	updateStories: function() {
@@ -33,13 +35,19 @@ export default React.createClass({
 		this.setState({stories: stories});
 	},
 
-	updateEntries: function() {
-		console.log('update entries');
-		this.setState({entries: entries});
-	},
 
 	render: function() {
-		const storiesList = this.state.stories.map( (val, i, arr) => {
+		// console.log(this.state.stories.get('entry'));
+
+		const filterStories = this.state.stories.filter((story, i, arr) => {
+			if(story.get('entry').length === 6) {
+				console.log(story);
+				return story;
+			} // end if statement
+		}); // end filterStories
+
+		const storiesList = filterStories.map( (val, i, arr) => {
+			// console.log(val.get('entry'));
 			return (
 				<StoryThumb 
 					key={val.get('id')}
@@ -58,9 +66,10 @@ export default React.createClass({
 					<h1>recently completed stories</h1>
 					<div className="complete-stories columns">
 						{storiesList}
+						}
 					</div>
 				</div>	
 			</section>
-			);
+		);
 	}
 });

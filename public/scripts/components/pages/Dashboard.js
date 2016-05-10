@@ -1,6 +1,6 @@
 import React from 'react';
-import user from '../../models/UserModel';
-import Stories from '../../collections/StoryCollection';
+import stories from '../../collections/StoryCollection';
+import entries from '../../collections/EntryCollection';
 import StoryThumb from '../subcomponents/StoryThumb';
 
 export default React.createClass({
@@ -9,29 +9,44 @@ export default React.createClass({
 		return (
 			{
 				user: user,
-				Stories: Stories
+				stories: stories,
+				entries: entries
 			}
 		);
 	},
 
 	componentDidMount: function() {
-		console.log('did my dashboard component mount?');
-		console.log(Stories);
-		Stories.on('update', this.updateStories);
-		Stories.fetch();
+		console.log('did my home page component mount?');
+		stories.on('update', this.updateStories);
+		stories.fetch({
+			data: {
+				withRelated: ['entry']
+			}
+		});
 	},
 
 	componentWillUnmount: function() {
-		Stories.off('update', this.updateStories);
-	},
-	
-	updateStories: function() {
-		console.log('update dashboard stories');
-		this.setState({Stories: Stories});
+		stories.off('update', this.updateStories);
 	},
 
+	updateStories: function() {
+		console.log('update home page stories');
+		this.setState({stories: stories});
+	},
+
+
 	render: function() {
-		const storiesList = this.state.Stories.map( (val, i, arr) => {
+		// console.log(this.state.stories.get('entry'));
+
+		const filterStories = this.state.stories.filter((story, i, arr) => {
+			if(story.get('entry').length < 6) {
+				console.log(story);
+				return story;
+			} // end if statement
+		}); // end filterStories
+
+		const storiesList = filterStories.map( (val, i, arr) => {
+			// console.log(val.get('entry'));
 			return (
 				<StoryThumb 
 					key={val.get('id')}
@@ -40,7 +55,7 @@ export default React.createClass({
 					coverImage={val.get('coverImage')}
 				/>
 			);
-		});
+		});	
 		return (
 			<section className="home">
 				<div>
