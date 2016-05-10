@@ -2,7 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import {Link} from 'react-router';
 import {browserHistory} from 'react-router';
-import user from '../models/userModel';
+import user from '../models/UserModel';
 
 export default React.createClass({
 	getInitialState: function() {
@@ -19,14 +19,17 @@ export default React.createClass({
 		});
 	},
 
-	render: function() {		
+	render: function() {
 		if(this.state.user.get('id')) {
 			return(
 				<nav>
 					<Link to="/"><img src="" />Exquisite Corpse</Link>
-					<Link className="nav-link" to='/start-story'>compose</Link>		
-					<Link className="nav-link" to='/continue-story'>continue</Link>
-					<a href="#" className="nav-links" onClick={this.logout}>Logout</a>				
+					<div className="nav-links">
+						<Link className="nav-link" to='/start-story'>compose</Link>		
+						<Link className="nav-link" to='/continue-story'>continue</Link>
+						<Link className="nav-link" to='/dashboard'>dashboard</Link>
+						<a href="#" className="nav-link" onClick={this.logout}>log out</a>
+					</div>	
 				</nav>
 			);
 		} else {
