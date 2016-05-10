@@ -6,6 +6,7 @@ import user from '../../models/UserModel';
 
 export default React.createClass({
 	getInitialState: function() {
+		console.log('this is my initial state')
 		return {
 			story: Story,
 			user: user,

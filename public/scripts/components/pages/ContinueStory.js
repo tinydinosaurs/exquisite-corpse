@@ -1,18 +1,35 @@
 import React from 'react';
-import Story from '../../models/StoryModel';
-import entry from '../../models/EntryModel';
+import stories from '../../collections/StoryCollection';
+import entries from '../../collections/EntryCollection';
 import user from '../../models/UserModel';
 
 export default React.createClass({
 	getInitialState: function() {
 		return {
 			user: user,
-			story: Story,
-			entry: entry
+			stories: stories,
+			entries: entries
 		};
 	},
 
+	componentDidMount: function() {
+		console.log('did my continue story component mount?');
+		entries.on('update', this.updateEntries);
+		entries.fetch();
+	},
+
+	componentWillUnmount: function() {
+		entries.off('update', this.updateEntries);
+	},
+
+	updateEntries: function() {
+		this.setState({entries: entries});
+	},
+
 	render: function() {
+		console.log(entries);
+		console.log(entries.models);
+		console.log(entries.models[0]);
 		return (
 			<section>
 				<h1>Continue a story</h1>

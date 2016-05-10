@@ -23,7 +23,7 @@ const router = (
 		<Route path="/" component={App}>
 			<IndexRoute component={Home}/>
 			<Route path="/dashboard" component={Dashboard} />
-			<Route path="/read-story" component={ReadStory} />
+			<Route path="/read/:storyId" component={ReadStory} />
 			<Route path="/start-story" component={StartStory} />
 			<Route path="/continue-story" component={ContinueStory} />
 			<Route path="/login" component={Login}/>
