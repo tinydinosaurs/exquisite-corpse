@@ -16,7 +16,7 @@ export default React.createClass({
 
 	render: function() {
 		return (
-			<section>
+			<section className="compose">
 				<h1>Start a story</h1>
 				<p>So you're ready to start a story, huh? Awesome. You'll need to give your story a title before you submit. Obviously, you'll also need to write something. Keep it clean and don't be a jerk. Otherwise, anything goes!</p>
 				<form onSubmit={this.startStory} className="story-form">
