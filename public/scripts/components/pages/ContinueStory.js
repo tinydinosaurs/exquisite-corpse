@@ -31,10 +31,10 @@ export default React.createClass({
 		console.log(entries.models);
 		console.log(entries.models[0]);
 		return (
-			<section>
+			<section className="compose">
 				<h1>Continue a story</h1>
-				<p>fetch story</p>
-				<form onSubmit={this.continueStory}>
+				<p>Favor packaging over toy intently stare at the same spot, and hide when guests come over.</p>
+				<form onSubmit={this.continueStory} className="story-form">
 					<label className="label">write something!</label>
 					<p className="control">
 						<textarea className="textarea" placeholder="start writing" ref="compose"></textarea>

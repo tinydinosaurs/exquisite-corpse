@@ -16,9 +16,11 @@ h1, h2, h3 {
 
 h1 {
 	font-size: 4.2rem;
-	margin-top: 2em;
-	margin-bottom: 1em;
+	margin-top: 2rem;
+	margin-bottom: 1.5rem;
 }
+
+p {font-size: 1.75rem}
 
 nav {
 	height: 4rem;
@@ -38,12 +40,12 @@ nav {
 .hero {
 	background: url('/../images/hero-img.png');
 	height: 30rem;
-	padding: 0 2rem;
+	padding: 3rem;
 	h1 {
 		font-family: 'Lora', serif;
 		font-style: italic;
 		color: #e9eae6;
-		font-size: 3rem;
+		font-size: 6rem;
 	}
 }
 
@@ -77,6 +79,48 @@ footer {
 	padding: 0.5rem 1rem;
 }
 
+.story-box {
+	overflow: hidden;
+	h2 {
+		font-size: 2.5rem;
+		padding: 0;
+		margin: 0;
+	}
+
+	img {
+		float: left;
+		width: 15rem;
+		height: 15rem;
+		margin-right: 2rem;
+	}
+}
+
+.cover-image {
+	float: left;
+	width: 15rem;
+	height: 15rem;
+
+}
+
+.story-details {
+	float: right;
+	margin-left: 2rem;
+}
+
+.compose{ 
+	margin: 0 5rem;
+}
+
+.story-form {
+	margin-top: 2rem;
+}
+
+.label {
+	color: $grey-dark;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	font-size: 2rem;
 
 
+}
 
