@@ -47,16 +47,18 @@ export default React.createClass({
 		}); // end filterStories
 
 		const storiesList = filterStories.map( (val, i, arr) => {
-			// console.log(val.get('entry'));
+			console.log(val.get('entry')[0].content);
 			return (
 				<StoryThumb 
 					key={val.get('id')}
 					id={val.get('id')}
 					title={val.get('title')}
 					coverImage={val.get('coverImage')}
+					content={val.get('entry')[0].content}
 				/>
 			);
 		});	
+
 		return (
 			<section className="home">
 				<div className="hero is-large">
@@ -66,7 +68,6 @@ export default React.createClass({
 					<h1>recently completed stories</h1>
 					<div className="complete-stories columns">
 						{storiesList}
-						}
 					</div>
 				</div>	
 			</section>

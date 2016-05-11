@@ -41,18 +41,20 @@ export default React.createClass({
 		const filterStories = this.state.stories.filter((story, i, arr) => {
 			if(story.get('entry').length < 6) {
 				console.log(story);
+				console.log(story.get('entry'));
 				return story;
 			} // end if statement
 		}); // end filterStories
 
 		const storiesList = filterStories.map( (val, i, arr) => {
-			// console.log(val.get('entry'));
+			// console.log(val.get('entry')[0].content);
 			return (
 				<StoryThumb 
 					key={val.get('id')}
 					id={val.get('id')}
 					title={val.get('title')}
 					coverImage={val.get('coverImage')}
+					content={val.get('entry')[0].content.slice(0, 159)}
 				/>
 			);
 		});	

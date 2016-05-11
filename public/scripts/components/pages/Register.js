@@ -79,7 +79,6 @@ export default React.createClass({
 				console.log('error');
 				console.log(errorArg);
 				this.setState({errors: errorArg.responseJSON});
-				// how do I add an error argument for username?
 			}
 		});
 	}
