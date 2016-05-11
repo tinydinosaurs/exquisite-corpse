@@ -36,3 +36,7 @@ ReactDOM.render(router, document.querySelector('main'));
 
 // <Route path="/story" component={CategoryPage} onEnter={requireAuth}/>
 // <Route path="/stories/:storyId/details" component={Details} onEnter={requireAuth}/>
+
+
+// should I create subcomponents for completed/incomplete/favorite/contributed to
+// how do I add an error argument for username on register page?
