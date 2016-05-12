@@ -1,32 +1,42 @@
 import React from 'react';
-import story from '../../models/StoryModel';
+import Story from '../../models/StoryModel';
 import EntryList from '../subcomponents/EntryList';
-// import entry from '../../collections/EntryCollection';
+import entry from '../../collections/EntryCollection';
 
 export default React.createClass({
 	getInitialState: function() {
 		return ({
 			user: user,
-			story: new story(
-				{
-					id: this.props.params.storyId
-				}
-			)
+			entry: entry,
+			story: new Story({
+				id: this.props.params.storyId
+			})
 		});
 	},
 
 	componentDidMount: function() {
-		this.state.story.fetch({
+		this.state.entry.fetch({
 			data: {
-				withRelated: ['entry']
+				where: {
+					storyId: this.props.params.storyId
+				}
 			}
 		});
 
+		this.state.story.fetch();
+
+		this.state.entry.on('update', this.updateEntries);
 		this.state.story.on('change', this.updateStory);
 	},
 
 	componentWillUnmount: function() {
-		this.state.story.off('change', this.updateStory);
+		this.state.entry.off('update', this.updateEntries);
+		this.state.story.off('change', this.updateStory);		
+
+	},
+
+	updateEntries: function() {
+		this.setState({entry: this.state.entry});
 	},
 
 	updateStory: function() {
@@ -34,20 +44,21 @@ export default React.createClass({
 	},
 
 	render: function() {
-		let entryArray = this.state.story.get('entry');
-
+		console.log('entries:');
+		console.log(this.state.entry);
+		let entryArray = this.state.entry.models;
 		if(!entryArray) {
 			entryArray = [];
 			return <div></div>;
 		} 
-			
+		console.log(this.state.story.get('title'));
+
 		const eachEntry = entryArray.map((val, i, arr) => {
-			console.log(val.content);
 			return (
 				<EntryList 
-					key={val.id}
-					id={val.id}
-					content={val.content}
+					key={val.get('id')}
+					id={val.get('id')}
+					content={val.get('content')}
 				/>
 			);
 		});

@@ -44,7 +44,7 @@
     "bcrypt": "^0.8.5",
     "body-parser": "~1.15.0",
     "bookshelf": "^0.9.4",
-    "bookshelf-api": "^1.3.0",
+    "bookshelf-api": "^1.4.0",
     "bulma": "0.0.24",
     "bunyan": "^1.8.0",
     "bunyan-prettystream": "^0.1.3",

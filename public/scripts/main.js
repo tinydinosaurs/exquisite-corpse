@@ -10,6 +10,7 @@ import StartStory from './components/pages/StartStory';
 import ContinueStory from './components/pages/ContinueStory';
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
+import Confirmation from './components/pages/Confirmation';
 
 
 $.ajaxSetup({
@@ -28,6 +29,7 @@ const router = (
 			<Route path="/continue/:storyId" component={ContinueStory} />
 			<Route path="/login" component={Login}/>
 			<Route path="/register" component={Register} />
+			<Route path="/confirmation" component={Confirmation} />
 		</Route>
 	</Router>
 );
