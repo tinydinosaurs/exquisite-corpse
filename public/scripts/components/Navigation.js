@@ -26,7 +26,6 @@ export default React.createClass({
 					<Link to="/"><img src="" />Exquisite Corpse</Link>
 					<div className="nav-links">
 						<Link className="nav-link" to='/start-story'>compose</Link>		
-						<Link className="nav-link" to='/continue-story'>continue</Link>
 						<Link className="nav-link" to='/dashboard'>dashboard</Link>
 						<a href="#" className="nav-link" onClick={this.logout}>log out</a>
 					</div>	

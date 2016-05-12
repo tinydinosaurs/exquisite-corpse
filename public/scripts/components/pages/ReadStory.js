@@ -6,6 +6,7 @@ import EntryList from '../subcomponents/EntryList';
 export default React.createClass({
 	getInitialState: function() {
 		return ({
+			user: user,
 			story: new story(
 				{
 					id: this.props.params.storyId
@@ -15,7 +16,6 @@ export default React.createClass({
 	},
 
 	componentDidMount: function() {
-		console.log('component mounted.');
 		this.state.story.fetch({
 			data: {
 				withRelated: ['entry']
@@ -34,9 +34,7 @@ export default React.createClass({
 	},
 
 	render: function() {
-		console.log(this.state.story.get('title'));
 		let entryArray = this.state.story.get('entry');
-		console.log(entryArray);
 
 		if(!entryArray) {
 			entryArray = [];
@@ -62,15 +60,3 @@ export default React.createClass({
 		);
 	}
 });
-
-
-
-
-		// if(!entryArray) {
-		// 	entryArray = [];
-		// 	return (
-		// 	<section>{entryArray}</section>
-		// 	);
-		// } else {
-		// 	const eachEntry = entryArray.map();
-		// }

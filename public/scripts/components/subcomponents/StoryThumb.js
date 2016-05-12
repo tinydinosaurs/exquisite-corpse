@@ -8,7 +8,7 @@ export default React.createClass({
 				<img src={this.props.coverImage} />
 					<h2>{this.props.title}</h2>
 					<p>{this.props.content}...</p>
-					<Link to={`/read/${this.props.id}`}>Read story</Link>
+					<Link to={`/${this.props.urlPath}/${this.props.id}`}>Read story</Link>
 			</div>
 		);
 	}

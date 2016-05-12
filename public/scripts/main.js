@@ -25,7 +25,7 @@ const router = (
 			<Route path="/dashboard" component={Dashboard} />
 			<Route path="/read/:storyId" component={ReadStory} />
 			<Route path="/start-story" component={StartStory} />
-			<Route path="/continue-story" component={ContinueStory} />
+			<Route path="/continue/:storyId" component={ContinueStory} />
 			<Route path="/login" component={Login}/>
 			<Route path="/register" component={Register} />
 		</Route>
@@ -34,9 +34,10 @@ const router = (
 
 ReactDOM.render(router, document.querySelector('main'));
 
-// <Route path="/story" component={CategoryPage} onEnter={requireAuth}/>
-// <Route path="/stories/:storyId/details" component={Details} onEnter={requireAuth}/>
 
 
 // should I create subcomponents for completed/incomplete/favorite/contributed to
-// how do I add an error argument for username on register page?
+
+// deal with unordered arrays on 'continue story page'
+// make landing page after story submission and send users there on success
+
