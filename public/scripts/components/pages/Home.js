@@ -55,6 +55,7 @@ export default React.createClass({
 					title={val.get('title')}
 					coverImage={val.get('coverImage')}
 					content={val.get('entry')[0].content}
+					urlPath='read'
 				/>
 			);
 		});	

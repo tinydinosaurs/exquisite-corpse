@@ -61,7 +61,7 @@ export default React.createClass({
 						storyId: data.id,
 						userId: this.state.user.id,
 						content: this.refs.compose.value,
-						order: 1
+						order: 0
 					},
 					header: {
 						Accept: 'application/json'

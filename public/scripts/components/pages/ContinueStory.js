@@ -1,43 +1,56 @@
 import React from 'react';
-import stories from '../../collections/StoryCollection';
-import entries from '../../collections/EntryCollection';
+import $ from 'jquery';
+import story from '../../models/StoryModel';
 import user from '../../models/UserModel';
 
 export default React.createClass({
 	getInitialState: function() {
-		return {
+		return ({
 			user: user,
-			stories: stories,
-			entries: entries
-		};
+			story: new story(
+				{
+					id: this.props.params.storyId
+				}
+			)
+		});
 	},
 
 	componentDidMount: function() {
-		console.log('did my continue story component mount?');
-		entries.on('update', this.updateEntries);
-		entries.fetch();
+		console.log('did my component mount?');
+		this.state.story.fetch({
+			data: {
+				withRelated: ['entry']
+			}
+		});
+
+		this.state.story.on('change', this.updateStory);
 	},
 
 	componentWillUnmount: function() {
-		entries.off('update', this.updateEntries);
+		this.state.story.off('change', this.updateStory);
 	},
 
-	updateEntries: function() {
-		this.setState({entries: entries});
+	updateStory: function() {
+		this.setState({story: this.state.story});
 	},
 
 	render: function() {
-		console.log(entries);
-		console.log(entries.models);
-		console.log(entries.models[0]);
+		let entryArray = this.state.story.get('entry');
+		if(!entryArray) {
+			entryArray = [];
+			return <div></div>;
+		}
+		console.log('did you have to let it render...');
+		let entrySnippet = entryArray[entryArray.length - 1].content.substr(-220);
+		console.log(entryArray.length);
+		console.log(entryArray);
 		return (
 			<section className="compose">
 				<h1>Continue a story</h1>
-				<p>Favor packaging over toy intently stare at the same spot, and hide when guests come over.</p>
+				<p>...{entrySnippet}</p>
 				<form onSubmit={this.continueStory} className="story-form">
-					<label className="label">write something!</label>
 					<p className="control">
-						<textarea className="textarea" placeholder="start writing" ref="compose"></textarea>
+						<textarea className="textarea" placeholder="start writing!" ref="compose"></textarea>
 					</p>
 					<p className="control">
 						<button className="button is-primary">Submit</button>
@@ -49,8 +62,30 @@ export default React.createClass({
 
 	continueStory: function(e) {
 		e.preventDefault();
-		console.log('clickety click click');
-		console.log(this.state.user.id);
-		console.log(this.state.story.id);
+		console.log('content: ' + this.refs.compose.value);
+		console.log('user id: ' + this.state.user.id);
+		console.log('story id: ' + this.props.params.storyId);
+		let entryOrder = this.state.story.get('entry').length;
+		console.log(entryOrder);
+		$.ajax({
+			url: '/api/v1/entry',
+			type: 'POST',
+			data: {
+				content: this.refs.compose.value,
+				userId: this.state.user.id,
+				storyId: this.props.params.storyId,
+				order: entryOrder
+			},
+			headers: {
+				Accept: 'application/json'
+			},
+			success: (entryAdded) => {
+				console.log(entryAdded);
+			},
+			error: (errorArg) => {
+				console.log('something went horribly wrong');
+			}
+		});			
 	}
 });
+
