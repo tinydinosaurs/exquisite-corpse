@@ -1,49 +1,49 @@
 import React from 'react';
 import $ from 'jquery';
-import story from '../../models/StoryModel';
+import entries from '../../collections/EntryCollection';
 import user from '../../models/UserModel';
+import {browserHistory} from 'react-router';
 
 export default React.createClass({
 	getInitialState: function() {
 		return ({
 			user: user,
-			story: new story(
-				{
-					id: this.props.params.storyId
-				}
-			)
+			entries: entries
 		});
 	},
 
 	componentDidMount: function() {
 		console.log('did my component mount?');
-		this.state.story.fetch({
+
+		this.state.entries.fetch({
 			data: {
-				withRelated: ['entry']
+				where: {
+					storyId: this.props.params.storyId
+				}
 			}
 		});
-
-		this.state.story.on('change', this.updateStory);
+		this.state.entries.on('update', this.updateEntries);
 	},
 
 	componentWillUnmount: function() {
-		this.state.story.off('change', this.updateStory);
+		this.state.entries.off('update', this.updateEntries);		
 	},
 
-	updateStory: function() {
-		this.setState({story: this.state.story});
+	updateEntries: function() {
+		this.setState({entries: this.state.entries});
 	},
 
 	render: function() {
-		let entryArray = this.state.story.get('entry');
-		if(!entryArray) {
+		let entryArray = this.state.entries;
+		if(!entryArray.length) {
 			entryArray = [];
 			return <div></div>;
 		}
 		console.log('did you have to let it render...');
-		let entrySnippet = entryArray[entryArray.length - 1].content.substr(-220);
 		console.log(entryArray.length);
-		console.log(entryArray);
+		console.log(entryArray.at(entryArray.length-1));
+		console.log(entryArray.at(entryArray.length-1).get('content'));
+		let entrySnippet = entryArray.at(entryArray.length-1).get('content').substr(-220);
 		return (
 			<section className="compose">
 				<h1>Continue a story</h1>
@@ -65,7 +65,7 @@ export default React.createClass({
 		console.log('content: ' + this.refs.compose.value);
 		console.log('user id: ' + this.state.user.id);
 		console.log('story id: ' + this.props.params.storyId);
-		let entryOrder = this.state.story.get('entry').length;
+		let entryOrder = this.state.entries.length+1;
 		console.log(entryOrder);
 		$.ajax({
 			url: '/api/v1/entry',
@@ -81,6 +81,8 @@ export default React.createClass({
 			},
 			success: (entryAdded) => {
 				console.log(entryAdded);
+
+				browserHistory.push('/confirmation');
 			},
 			error: (errorArg) => {
 				console.log('something went horribly wrong');
