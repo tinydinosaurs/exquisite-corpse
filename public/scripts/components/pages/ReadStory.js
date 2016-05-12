@@ -47,7 +47,7 @@ export default React.createClass({
 		console.log('entries:');
 		console.log(this.state.entry);
 		let entryArray = this.state.entry.models;
-		if(!entryArray) {
+		if(!entryArray.length) {
 			entryArray = [];
 			return <div></div>;
 		} 
