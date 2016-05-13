@@ -2,16 +2,16 @@
 @import url(https://fonts.googleapis.com/css?family=Lora:400,400italic|Lato:700,400);
 
 html {
-    font-size: 62.5%
+    font-size: 62.5%;
 }
 
 body {
-	font-family: 'Lora', serif;
+	font-family: 'Lora', Georgia, serif;
 	font-size: 1.6rem;
 }
 
 h1, h2, h3 {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Lato', Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -53,16 +53,20 @@ nav {
 	padding-top: 3rem;
 }
 
-.completed-stories {
+.stories {
 	margin-top: 1rem;
 }
 
 .read-story {
-	font-size: 2.2rem;
-	line-height: 3.2rem;
-	width: 60rem;
+	font-size: 1.8rem;
+	line-height: 3rem;
+	width: 90%;
 	margin: 0 auto;
-
+	h1 {
+		font-size: 4.6rem;
+		margin-top: 4rem;
+		margin-bottom: 3rem;
+	}
 	p {
 		margin-bottom: 1em;
 	}
@@ -75,23 +79,32 @@ nav {
 
 footer {
 	border-top: 1px solid $grey-light;
-	margin-top: 1.5rem;
+	margin-top: 6rem;
 	padding: 0.5rem 1rem;
 }
 
 .story-box {
 	overflow: hidden;
-	h2 {
-		font-size: 2.5rem;
-		padding: 0;
-		margin: 0;
-	}
-
 	img {
 		float: left;
 		width: 15rem;
 		height: 15rem;
-		margin-right: 2rem;
+		margin: 0 2rem 0 0;
+		padding: 0;
+	}
+	h2 {
+		font-size: 2.33rem;
+		line-height: 2.66rem;
+		padding: 0;
+		margin: -4px 0 9px 0;
+	}
+	p {
+		font-size: 1.66rem;
+	}
+	a {
+		font-family: 'Lato', Helvetica, Arial, sans-serif; 
+		padding-top: 9px;
+		float: right;
 	}
 }
 
@@ -107,7 +120,7 @@ footer {
 	margin-left: 2rem;
 }
 
-.compose{ 
+.compose, .dashboard, .list-section{ 
 	margin: 0 5rem;
 }
 
@@ -120,7 +133,21 @@ footer {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	font-size: 2rem;
-
-
 }
 
+@media all and (min-width: 600px) {
+	.read-story {
+		font-size: 2.2rem;
+		line-height: 3.2rem;
+		width: 60rem;
+		margin: 0 auto;
+		h1 {
+			font-size: 4.6rem;
+			margin-top: 4rem;
+			margin-bottom: 3rem;
+		}
+		p {
+			margin-bottom: 1em;
+		}
+	}
+}
