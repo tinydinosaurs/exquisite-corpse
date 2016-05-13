@@ -40,9 +40,6 @@ export default React.createClass({
 			return <div></div>;
 		}
 		console.log('did you have to let it render...');
-		console.log(entryArray.length);
-		console.log(entryArray.at(entryArray.length-1));
-		console.log(entryArray.at(entryArray.length-1).get('content'));
 		let entrySnippet = entryArray.at(entryArray.length-1).get('content').substr(-220);
 		return (
 			<section className="compose">
@@ -62,11 +59,7 @@ export default React.createClass({
 
 	continueStory: function(e) {
 		e.preventDefault();
-		console.log('content: ' + this.refs.compose.value);
-		console.log('user id: ' + this.state.user.id);
-		console.log('story id: ' + this.props.params.storyId);
-		let entryOrder = this.state.entries.length+1;
-		console.log(entryOrder);
+		let entryOrder = this.state.entries.length;
 		$.ajax({
 			url: '/api/v1/entry',
 			type: 'POST',
@@ -81,7 +74,6 @@ export default React.createClass({
 			},
 			success: (entryAdded) => {
 				console.log(entryAdded);
-
 				browserHistory.push('/confirmation');
 			},
 			error: (errorArg) => {

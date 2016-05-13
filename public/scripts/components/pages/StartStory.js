@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
+import {browserHistory} from 'react-router';
 import Story from '../../models/StoryModel';
 import entry from '../../models/EntryModel';
 import user from '../../models/UserModel';
@@ -68,6 +69,7 @@ export default React.createClass({
 					},
 					success: (entryAdded) => {
 						console.log(entryAdded);
+						browserHistory.push('/confirmation');
 					},
 					error: (entryError) => {
 						console.log('entry addition failed');
