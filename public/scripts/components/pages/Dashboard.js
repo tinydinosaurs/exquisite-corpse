@@ -39,7 +39,7 @@ export default React.createClass({
 		// console.log(this.state.stories.get('entry'));
 
 		const filterStories = this.state.stories.filter((story, i, arr) => {
-			if(story.get('entry').length < 6) {
+			if(story.get('entry') && story.get('entry').length > 0 && story.get('entry').length < 6) {
 				console.log(story);
 				console.log(story.get('entry'));
 				return story;
