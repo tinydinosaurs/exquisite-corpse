@@ -54,17 +54,17 @@ export default React.createClass({
 					id={val.get('id')}
 					title={val.get('title')}
 					coverImage={val.get('coverImage')}
-					content={val.get('entry')[0].content.slice(0, 159)}
+					content={val.get('entry')[0].content.slice(0, 66)}
 					urlPath='continue'
 				/>
 			);
 		});	
 		return (
-			<section className="home">
+			<section className="dashboard">
 				<div>
-					<h1 className="title">Welcome, human</h1>
-					<p>Here are some stories for your consideration</p>
-					<div className="complete-stories columns">
+					<h1>Welcome, human</h1>
+					<p>The following stories are incomplete and are ready for your contribution. Select one and get to writing!</p>
+					<div className="stories columns is-multiline">
 						{storiesList}
 					</div>	
 				</div>

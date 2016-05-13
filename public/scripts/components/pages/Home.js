@@ -67,7 +67,7 @@ export default React.createClass({
 				</div>
 				<div className="list-section">
 					<h1>recently completed stories</h1>
-					<div className="complete-stories columns">
+					<div className="stories columns is-multiline">
 						{storiesList}
 					</div>
 				</div>	
