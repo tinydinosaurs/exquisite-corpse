@@ -52,16 +52,27 @@ section:not(.home) {
 }
 
 .hero {
-	background: url('/../images/hero-img.png');
-	height: 36rem;
-	padding: 3rem;
+	background: url('/../images/hero_75_fill.png') no-repeat fixed;
+  	background-size: 150%;
+	padding-left: 3rem;
+	padding-right: 3rem;
 	padding-top: 6rem;
 	h1 {
 		font-family: 'Lora', serif;
 		font-style: italic;
 		color: #e9eae6;
 		font-size: 5rem;
+		background-color: rgba(0, 0, 0, 0.5);
+		padding: 1rem 0 2rem 0;
+		text-align: center;
+		width: 38rem;
 	}
+}
+
+.hero:after {
+  content: "";
+  display: block;
+  padding-bottom: 20%;
 }
 
 .list-section {
@@ -145,11 +156,12 @@ footer {
 	font-size: 2rem;
 }
 
-@media all and (min-width: 632px) {
+@media all and (min-width: 769px) {
 	
 	.hero {
 		h1 {
 			font-size: 6rem;
+			width: 44rem;
 		}
 	}
 	.story-box {
@@ -198,7 +210,7 @@ footer {
 		padding-right: 6rem;
 
 		h1 {
-			font-size: 8rem;
+			font-size: 7rem;
 		}
 	}
 }
