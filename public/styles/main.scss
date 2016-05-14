@@ -15,18 +15,32 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 4.2rem;
-	margin-top: 2rem;
+	font-size: 3.25rem;
 	margin-bottom: 1.5rem;
 }
 
 p {font-size: 1.75rem}
 
 nav {
-	height: 4rem;
-	line-height: 4rem;
+	height: 4.5rem;
+	line-height: 4.5rem;
 	overflow: hidden;
-	padding: 0 1rem;
+	padding: 0 3rem;
+	background-color: #fcfcfc;
+	border-bottom: 1px solid rgba(238, 238, 238, 0.6);
+	box-shadow: 0 0 3px 0 rgba(238, 238, 238, 0.72);
+}
+
+section:not(.home) {
+	margin-top: 2rem;
+}
+
+.compose, .dashboard, .list-section{ 
+	padding: 0 10%;
+}
+
+.logo {
+	font-size: 1.75rem;
 }
 
 .nav-links {
@@ -34,18 +48,19 @@ nav {
 }
 
 .nav-link {
-	margin-left: 0.75rem;
+	margin-left: 1rem;
 }
 
 .hero {
 	background: url('/../images/hero-img.png');
-	height: 30rem;
+	height: 36rem;
 	padding: 3rem;
+	padding-top: 6rem;
 	h1 {
 		font-family: 'Lora', serif;
 		font-style: italic;
 		color: #e9eae6;
-		font-size: 6rem;
+		font-size: 5rem;
 	}
 }
 
@@ -80,7 +95,7 @@ nav {
 footer {
 	border-top: 1px solid $grey-light;
 	margin-top: 6rem;
-	padding: 0.5rem 1rem;
+	padding: 2rem 3rem;
 }
 
 .story-box {
@@ -93,8 +108,8 @@ footer {
 		padding: 0;
 	}
 	h2 {
-		font-size: 2.33rem;
-		line-height: 2.66rem;
+		font-size: 2.25rem;
+		line-height: 2.5rem;
 		padding: 0;
 		margin: -4px 0 9px 0;
 	}
@@ -102,7 +117,6 @@ footer {
 		font-size: 1.66rem;
 	}
 	a {
-		font-family: 'Lato', Helvetica, Arial, sans-serif; 
 		padding-top: 9px;
 		float: right;
 	}
@@ -120,10 +134,6 @@ footer {
 	margin-left: 2rem;
 }
 
-.compose, .dashboard, .list-section{ 
-	margin: 0 5rem;
-}
-
 .story-form {
 	margin-top: 2rem;
 }
@@ -135,7 +145,27 @@ footer {
 	font-size: 2rem;
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 632px) {
+	
+	.hero {
+		h1 {
+			font-size: 6rem;
+		}
+	}
+	.story-box {
+	overflow: hidden;
+	
+		h2 {
+			font-size: 2.33rem;
+			line-height: 2.66rem;
+		}
+
+	}
+
+	h1 {
+		font-size: 4.2rem;
+	}
+
 	.read-story {
 		font-size: 2.2rem;
 		line-height: 3.2rem;
@@ -148,6 +178,27 @@ footer {
 		}
 		p {
 			margin-bottom: 1em;
+		}
+	}
+}
+
+@media all and (min-width: 1100px) {
+	// nav, footer {
+	// 	padding-right: 12rem;
+	// 	padding-left: 12rem;
+	// }
+
+	// .dashboard, .list-section, .compose {
+	// 	padding-right: 18rem;
+	// 	padding-left: 18rem;
+	// }
+
+	.hero {
+		padding-left: 6rem;
+		padding-right: 6rem;
+
+		h1 {
+			font-size: 8rem;
 		}
 	}
 }
