@@ -12,7 +12,7 @@ router.get('/entry', bookshelfApi);
 router.post('/entry', loggedIn,bookshelfApi);
 
 
-// router.use('/', bookshelfApi);
+router.use('/', bookshelfApi);
 // router.get('/products', function(req, res, next) {
 
 // });
