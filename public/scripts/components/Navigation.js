@@ -23,7 +23,7 @@ export default React.createClass({
 		if(this.state.user.get('id')) {
 			return(
 				<nav>
-					<Link to="/"><img src="" />Exquisite Corpse</Link>
+					<Link to="/"><img src="" /><span className='logo'>Exquisite Corpse</span></Link>
 					<div className="nav-links">
 						<Link className="nav-link" to='/start-story'>compose</Link>		
 						<Link className="nav-link" to='/dashboard'>dashboard</Link>
@@ -36,7 +36,6 @@ export default React.createClass({
 				<nav>
 					<Link to="/"><img src="" />Exquisite Corpse</Link>
 					<div className="nav-links">
-						<Link className="nav-link" to='/read-story'>read</Link>
 						<Link className="nav-link" to='/login'>log in</Link>
 						<Link className="nav-link" to='/register'>register</Link>			
 					</div>
