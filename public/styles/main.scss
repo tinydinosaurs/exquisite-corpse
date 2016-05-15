@@ -110,7 +110,14 @@ footer {
 }
 
 .story-box {
+	width: 100%;
+	whitespace: no-wrap;
 	overflow: hidden;
+	text-overflow: ellipsis;
+	background-color: white;
+	padding: 10px;
+	border-bottom: 1px solid rgba(238, 238, 238, 0.6);
+	box-shadow: 0 0 3px 0 rgba(238, 238, 238, 0.72);
 	img {
 		float: left;
 		width: 15rem;
@@ -131,6 +138,11 @@ footer {
 		padding-top: 9px;
 		float: right;
 	}
+}
+
+.preview-text {
+	height: 91px;
+	overflow: hidden;
 }
 
 .cover-image {
@@ -159,6 +171,8 @@ footer {
 @media all and (min-width: 769px) {
 	
 	.hero {
+		 background-size: 120%;
+
 		h1 {
 			font-size: 6rem;
 			width: 44rem;
@@ -208,9 +222,11 @@ footer {
 	.hero {
 		padding-left: 6rem;
 		padding-right: 6rem;
+		background-size: 100%;
 
 		h1 {
 			font-size: 7rem;
+			width: 52rem;
 		}
 	}
 }
