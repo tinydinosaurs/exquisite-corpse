@@ -43,11 +43,11 @@ export default React.createClass({
 				<form onSubmit={this.startStory} className="story-form">
 					<label className="label">give it a title!</label>
 					<p className="control">
-						<input className="input" type="text" placeholder="story title" ref="title" />
+						<input className="input" type="text" placeholder="story title" ref="title" required />
 					</p>
 					<label className="label">write something!</label>
 					<p className="control">
-						<textarea className="textarea" placeholder="start writing" ref="compose"></textarea>
+						<textarea className="textarea" placeholder="start writing" ref="compose" required="required"></textarea>
 					</p>
 					<p className="control">
 						<button className="button is-primary is-outlined">Submit</button>
