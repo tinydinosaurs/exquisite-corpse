@@ -14,9 +14,8 @@ export default React.createClass({
 	render: function() {
 		return (
 			<section>
-				<h1>Register now!</h1>
-
 				<form className="register-form" onSubmit={this.register}>
+					<h1>Register now!</h1>
 					<label className="label">first name</label>
 					<p className="control">
   						<input className="input" type="text" ref="firstName" placeholder="first name" />
@@ -45,7 +44,7 @@ export default React.createClass({
   						<input className="input" type="text" ref="confirmPass" placeholder="confirm password" />
   					</p>*/}
   					<p className="control">
-						<button type="submit" className="button is-primary">Register</button>
+						<button type="submit" className="button is-primary is-outlined">Register</button>
 					</p>
 				</form>
 

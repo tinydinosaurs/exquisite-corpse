@@ -5,7 +5,7 @@ import StoryThumb from '../subcomponents/StoryThumb';
 
 export default React.createClass({
 	getInitialState: function() {
-		console.log('this is the dashboard initial state');
+		// console.log('this is the dashboard initial state');
 		return (
 			{
 				user: user,
@@ -16,7 +16,7 @@ export default React.createClass({
 	},
 
 	componentDidMount: function() {
-		console.log('did my home page component mount?');
+		// console.log('did my home page component mount?');
 		stories.on('update', this.updateStories);
 		stories.fetch({
 			data: {
@@ -30,7 +30,7 @@ export default React.createClass({
 	},
 
 	updateStories: function() {
-		console.log('update home page stories');
+		// console.log('update home page stories');
 		this.setState({stories: stories});
 	},
 
@@ -40,8 +40,8 @@ export default React.createClass({
 
 		const filterStories = this.state.stories.filter((story, i, arr) => {
 			if(story.get('entry') && story.get('entry').length > 0 && story.get('entry').length < 6) {
-				console.log(story);
-				console.log(story.get('entry'));
+				// console.log(story);
+				// console.log(story.get('entry'));
 				return story;
 			} // end if statement
 		}); // end filterStories
