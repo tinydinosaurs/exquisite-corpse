@@ -11,6 +11,7 @@ import ContinueStory from './components/pages/ContinueStory';
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 import Confirmation from './components/pages/Confirmation';
+import user from './models/UserModel';
 
 
 $.ajaxSetup({
@@ -19,27 +20,27 @@ $.ajaxSetup({
 	}
 });
 
+function requireAuth(nextState, replace) {
+	  if (!user.get('id')) {
+	    replace({
+	      pathname: '/'
+	    });
+	}
+}
+
 const router = (
 	<Router history={browserHistory}>
 		<Route path="/" component={App}>
 			<IndexRoute component={Home}/>
-			<Route path="/dashboard" component={Dashboard} />
+			<Route path="/dashboard" component={Dashboard} onEnter={requireAuth} />
 			<Route path="/read/:storyId" component={ReadStory} />
-			<Route path="/start-story" component={StartStory} />
-			<Route path="/continue/:storyId" component={ContinueStory} />
+			<Route path="/start-story" component={StartStory} onEnter={requireAuth} />
+			<Route path="/continue/:storyId" component={ContinueStory} onEnter={requireAuth} />
 			<Route path="/login" component={Login}/>
 			<Route path="/register" component={Register} />
-			<Route path="/confirmation" component={Confirmation} />
+			<Route path="/confirmation" component={Confirmation} onEnter={requireAuth} />
 		</Route>
 	</Router>
 );
 
 ReactDOM.render(router, document.querySelector('main'));
-
-
-
-// should I create subcomponents for completed/incomplete/favorite/contributed to
-
-// deal with unordered arrays on 'continue story page'
-// make landing page after story submission and send users there on success
-

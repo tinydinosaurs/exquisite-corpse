@@ -28,6 +28,11 @@ p {font-size: 1.75rem}
 	border-color: #48b2e2;
 	color: #48b2e2;
 }
+.button.is-primary.is-outlined:hover {
+	background:  #48b2e2;
+	border-color: transparent;
+	color: white;
+}
 
 // .logo-img {
 // 	width: 3.5rem;

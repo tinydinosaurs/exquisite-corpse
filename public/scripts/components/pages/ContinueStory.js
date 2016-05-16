@@ -13,7 +13,6 @@ export default React.createClass({
 	},
 
 	componentDidMount: function() {
-		console.log('did my component mount?');
 
 		this.state.entries.fetch({
 			data: {
@@ -39,7 +38,6 @@ export default React.createClass({
 			entryArray = [];
 			return <div></div>;
 		}
-		console.log('did you have to let it render...');
 		let entrySnippet = entryArray.at(entryArray.length-1).get('content').substr(-220);
 		return (
 			<section className="compose">

@@ -54,7 +54,6 @@ export default React.createClass({
 
 	register: function(e) {
 		e.preventDefault();
-		console.log('register is clickety');
 		$.ajax({
 			url: 'auth/register',
 			type: 'POST',
@@ -69,14 +68,10 @@ export default React.createClass({
 				Accept: 'application/json'
 			},
 			success: (data) => {
-				console.log(data);
 				this.state.user.set(data);
-				console.log(this.state.user);
 				browserHistory.push('/dashboard');
 			},
 			error: (errorArg) => {
-				console.log('error');
-				console.log(errorArg);
 				this.setState({errors: errorArg.responseJSON});
 			}
 		});
