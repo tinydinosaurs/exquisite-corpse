@@ -23,7 +23,7 @@ export default React.createClass({
 		if(this.state.user.get('id')) {
 			return(
 				<nav>
-					<Link to="/"><img src="" /><span className='logo'>Exquisite Corpse</span></Link>
+					<Link to="/"><img src="" className="logo-img" /><span className='logo'>Exquisite Corpse</span></Link>
 					<div className="nav-links">
 						<Link className="nav-link" to='/start-story'>compose</Link>		
 						<Link className="nav-link" to='/dashboard'>dashboard</Link>

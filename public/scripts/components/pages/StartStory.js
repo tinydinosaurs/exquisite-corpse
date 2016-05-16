@@ -26,7 +26,7 @@ let coverImages = [
 
 export default React.createClass({
 	getInitialState: function() {
-		console.log('this is my initial state');
+		// console.log('this is my initial state');
 		return {
 			story: Story,
 			user: user,
@@ -50,7 +50,7 @@ export default React.createClass({
 						<textarea className="textarea" placeholder="start writing" ref="compose"></textarea>
 					</p>
 					<p className="control">
-						<button className="button is-primary">Submit</button>
+						<button className="button is-primary is-outlined">Submit</button>
 					</p>
 				</form>
 			</section>
@@ -59,9 +59,9 @@ export default React.createClass({
 
 	startStory: function(e) {
 		e.preventDefault();
-		console.log(this.state.user.id);
-		console.log(this.refs.title.value);
-		console.log(coverImages[Math.floor(Math.random() * 16)]);
+		// console.log(this.state.user.id);
+		// console.log(this.refs.title.value);
+		// console.log(coverImages[Math.floor(Math.random() * 16)]);
 		$.ajax({
 			url: '/api/v1/story',
 			type: 'POST',
@@ -74,8 +74,8 @@ export default React.createClass({
 				Accept: 'application/json'
 			},
 			success: (data) => {
-				console.log(data);
-				console.log(data.id);
+				// console.log(data);
+				// console.log(data.id);
 				$.ajax({
 					url: '/api/v1/entry',
 					type: 'POST',
