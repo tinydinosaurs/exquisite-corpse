@@ -50,7 +50,7 @@ export default React.createClass({
 						<textarea className="textarea" placeholder="start writing!" ref="compose"></textarea>
 					</p>
 					<p className="control">
-						<button className="button is-primary">Submit</button>
+						<button className="button is-primary is-outlined">Submit</button>
 					</p>
 				</form>
 			</section>

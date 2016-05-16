@@ -27,7 +27,7 @@ export default React.createClass({
 					</p>
 					<div className="error">{this.state.errors.password ? this.state.errors.password.message : null}</div>
 					<p className="control">
-						<button type="submit" className="button is-primary">Login</button>
+						<button type="submit" className="button is-primary is-outlined">Login</button>
 					</p>
 				</form>
 			</section>
