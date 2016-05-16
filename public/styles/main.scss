@@ -19,8 +19,22 @@ h1 {
 	margin-bottom: 1.5rem;
 }
 
+a {color: #48b2e2}
+
 p {font-size: 1.75rem}
 
+.button.is-primary.is-outlined {
+	background: transparent;
+	border-color: #48b2e2;
+	color: #48b2e2;
+}
+
+// .logo-img {
+// 	width: 3.5rem;
+// 	height: 3.5rem;
+// 	margin-right: 2rem;
+// 	margin-top: 0.5rem;
+// } 
 nav {
 	height: 4.5rem;
 	line-height: 4.5rem;
@@ -98,7 +112,7 @@ section:not(.home) {
 	}
 }
 
-.login-box {
+.login-box, .register-form {
 	width: 66%;
 	margin: 5rem auto;
 }
