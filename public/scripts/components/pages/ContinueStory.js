@@ -39,20 +39,38 @@ export default React.createClass({
 			return <div></div>;
 		}
 		let entrySnippet = entryArray.at(entryArray.length-1).get('content').substr(-220);
-		return (
-			<section className="compose">
-				<h1>Continue a story</h1>
-				<p>...{entrySnippet}</p>
-				<form onSubmit={this.continueStory} className="story-form">
-					<p className="control">
-						<textarea className="textarea" placeholder="start writing!" ref="compose" required ></textarea>
-					</p>
-					<p className="control">
-						<button className="button is-primary is-outlined">Submit</button>
-					</p>
-				</form>
-			</section>
-		);
+		if(entryArray.length === 5) {
+			return (
+				<section className="compose">
+					<h1>Continue a story</h1>
+					<p className="last">This is the last chunk of the story. Please write an ending!</p>
+					<p>...{entrySnippet}</p>
+					<form onSubmit={this.continueStory} className="story-form">
+						<p className="control">
+							<textarea className="textarea" placeholder="start writing!" ref="compose" required ></textarea>
+						</p>
+						<p className="control">
+							<button className="button is-primary is-outlined">Submit</button>
+						</p>
+					</form>
+				</section>
+			);
+		} else {
+			return (
+				<section className="compose">
+					<h1>Continue a story</h1>
+					<p>...{entrySnippet}</p>
+					<form onSubmit={this.continueStory} className="story-form">
+						<p className="control">
+							<textarea className="textarea" placeholder="start writing!" ref="compose" required ></textarea>
+						</p>
+						<p className="control">
+							<button className="button is-primary is-outlined">Submit</button>
+						</p>
+					</form>
+				</section>
+			);
+		}
 	},
 
 	continueStory: function(e) {
