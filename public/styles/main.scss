@@ -17,6 +17,7 @@ h1, h2, h3 {
 h1 {
 	font-size: 3.25rem;
 	margin-bottom: 1.5rem;
+	line-height: 3.8rem;
 }
 
 a {color: #48b2e2}
@@ -72,19 +73,17 @@ section:not(.home) {
 
 .hero {
 	background: url('/../images/hero_75_fill.png') no-repeat fixed;
-  	background-size: 150%;
-	padding-left: 3rem;
-	padding-right: 3rem;
-	padding-top: 6rem;
+  	background-size: 180%;
+	padding: 3rem 3rem 3rem 1rem;
 	h1 {
 		font-family: 'Lora', serif;
 		font-style: italic;
 		color: #e9eae6;
-		font-size: 5rem;
+		font-size: 3.6rem;
 		background-color: rgba(0, 0, 0, 0.5);
 		padding: 1rem 0 2rem 0;
 		text-align: center;
-		width: 38rem;
+		width: 28rem;
 	}
 }
 
@@ -111,6 +110,7 @@ section:not(.home) {
 		font-size: 4.6rem;
 		margin-top: 4rem;
 		margin-bottom: 3rem;
+		line-height: 5.2rem;
 	}
 	p {
 		margin-bottom: 1em;
@@ -139,8 +139,8 @@ footer {
 	box-shadow: 0 0 3px 0 rgba(238, 238, 238, 0.72);
 	img {
 		float: left;
-		width: 15rem;
-		height: 15rem;
+		width: 10rem;
+		height: 10rem;
 		margin: 0 2rem 0 0;
 		padding: 0;
 	}
@@ -185,6 +185,31 @@ footer {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	font-size: 2rem;
+}
+
+@media all and (min-width: 461px) {
+		
+	.hero {
+	  	background-size: 150%;
+		padding-top: 6rem 3rem 0 3rem;
+		h1 {
+			font-family: 'Lora', serif;
+			font-style: italic;
+			color: #e9eae6;
+			font-size: 5rem;
+			background-color: rgba(0, 0, 0, 0.5);
+			padding: 1rem 0 2rem 0;
+			text-align: center;
+			width: 38rem;
+		}
+	}
+	.story-box img {
+		float: left;
+		width: 15rem;
+		height: 15rem;
+		margin: 0 2rem 0 0;
+		padding: 0;
+	}
 }
 
 @media all and (min-width: 769px) {
