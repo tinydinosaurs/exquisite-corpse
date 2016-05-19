@@ -62,7 +62,8 @@ export default React.createClass({
 					<p>...{entrySnippet}</p>
 					<form onSubmit={this.continueStory} className="story-form">
 						<p className="control">
-							<textarea className="textarea" placeholder="start writing!" ref="compose" required ></textarea>
+							<label className="label">Pick up this story where the previous writer left off:</label>
+							<textarea className="textarea" placeholder="start writing" ref="compose" required ></textarea>
 						</p>
 						<p className="control">
 							<button className="button is-primary is-outlined">Submit</button>
