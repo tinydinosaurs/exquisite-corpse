@@ -7,22 +7,35 @@ html {
 
 body {
 	font-family: 'Lora', Georgia, serif;
-	font-size: 1.6rem;
+	font-size: 1.618rem;
+	line-height: 1.45;
 }
 
 h1, h2, h3 {
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	margin-bottom: 0.5rem;
+	line-height: 1.2;
 }
 
 h1 {
-	font-size: 3.25rem;
-	margin-bottom: 1.5rem;
-	line-height: 3.8rem;
+	font-size: 4.236rem;
+}
+
+h2 {
+	font-size: 2.618rem;
 }
 
 a {color: #48b2e2}
 
-p {font-size: 1.75rem}
+p {
+	font-size: 1.8rem;
+	line-height: 3rem;
+	margin-bottom: 1.8rem;
+}
+
+.textarea {
+	min-height: 30rem;
+}
 
 .last {
 	color: #c9738e;
@@ -63,6 +76,9 @@ section:not(.home) {
 
 .compose, .dashboard, .list-section, .confirm{ 
 	padding: 0 10%;
+	h1 {
+		margin-bottom: 2.2rem;
+	}
 }
 
 .logo {
@@ -103,9 +119,9 @@ section:not(.home) {
 	padding-top: 3rem;
 }
 
-.stories {
-	margin-top: 1rem;
-}
+// .stories {
+// 	margin-top: 1rem;
+// }
 
 .read-story {
 	font-size: 1.8rem;
@@ -113,19 +129,24 @@ section:not(.home) {
 	width: 90%;
 	margin: 0 auto;
 	h1 {
-		font-size: 4.6rem;
 		margin-top: 4rem;
 		margin-bottom: 3rem;
-		line-height: 5.2rem;
 	}
 	p {
 		margin-bottom: 1em;
 	}
 }
 
+.story-entries {
+	margin-bottom: 1.8rem;
+}
+
 .login-box, .register-form {
 	width: 66%;
 	margin: 5rem auto;
+	h1 {
+		margin-bottom: 1.618rem;
+	}
 }
 
 footer {
@@ -151,13 +172,12 @@ footer {
 		padding: 0;
 	}
 	h2 {
-		font-size: 2.25rem;
-		line-height: 2.5rem;
 		padding: 0;
 		margin: -4px 0 9px 0;
 	}
 	p {
-		font-size: 1.66rem;
+		font-size: 1.618rem;
+		line-height: 2.3rem;
 	}
 	a {
 		padding-top: 9px;
@@ -190,7 +210,8 @@ footer {
 	color: $grey-dark;
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	font-size: 2rem;
+	font-size: 1.8rem;
+	cursor: arrow;
 }
 
 @media all and (min-width: 461px) {
@@ -218,6 +239,12 @@ footer {
 	}
 }
 
+@media all and (min-width: 641px) {
+	.read-story {
+		width: 80%;
+	}
+}
+
 @media all and (min-width: 769px) {
 	
 	.hero {
@@ -230,31 +257,24 @@ footer {
 	}
 	.story-box {
 	overflow: hidden;
-	
-		h2 {
-			font-size: 2.33rem;
-			line-height: 2.66rem;
-		}
 
-	}
-
-	h1 {
-		font-size: 4.2rem;
 	}
 
 	.read-story {
-		font-size: 2.2rem;
-		line-height: 3.2rem;
+		font-size: 2.1rem;
+		line-height: 3.3rem;
 		width: 60rem;
 		margin: 0 auto;
 		h1 {
-			font-size: 4.6rem;
-			margin-top: 4rem;
-			margin-bottom: 3rem;
+			margin-bottom: 3.2rem;
 		}
 		p {
 			margin-bottom: 1em;
 		}
+	}
+
+	.story-entries {
+		margin-bottom: 2.1rem;
 	}
 }
 
@@ -268,6 +288,14 @@ footer {
 	// 	padding-right: 18rem;
 	// 	padding-left: 18rem;
 	// }
+	.register-form, .login-box {
+		width: 45%;
+	}
+
+	.story-form {
+		width: 75%;
+		margin: 2rem auto;
+	}
 
 	.hero {
 		padding-left: 6rem;
